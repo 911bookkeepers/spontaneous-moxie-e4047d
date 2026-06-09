@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q39996G5NK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q39996G5NK');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Service Areas — 911 Bookkeepers LLC</title>
+<meta name="description" content="911 Bookkeepers serves trades contractors in Louisiana (Baton Rouge, New Orleans, Lafayette) and Wisconsin. Remote-first. No office visit required." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Saira+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Kaushan+Script&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="site.css" />
+<style>
+.areas-split { padding: 100px 0; }
+.areas-split.bg { background: var(--steel-50); border-top: 2px solid var(--steel-200); }
+.state-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.state-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px; border-radius: var(--r-pill); font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; margin-bottom: 16px; border: 2px solid var(--ink); }
+.state-badge.la { background: var(--red); color: #fff; }
+.state-badge.wi { background: var(--navy); color: #fff; }
+.state-h2 { font-family: var(--font-head); font-weight: 800; text-transform: uppercase; font-size: 40px; line-height: 1.05; color: var(--ink); margin-bottom: 14px; }
+.state-intro { font-size: 16px; line-height: 1.65; color: var(--steel-600); margin-bottom: 28px; }
+.cities-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; margin-bottom: 28px; }
+.city-item { display: flex; align-items: center; gap: 8px; font-size: 14.5px; color: var(--steel-700); padding: 8px 0; border-bottom: 1px solid var(--steel-100); }
+.city-ic { color: var(--red); flex: none; }
+.state-angle { background: var(--white); border: 2px solid var(--ink); border-radius: var(--r-lg); padding: 26px 24px; box-shadow: var(--shadow-md); }
+.state-angle-head { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; color: var(--red); margin-bottom: 14px; }
+.angle-item { display: flex; gap: 10px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid var(--steel-100); font-size: 14.5px; color: var(--steel-700); line-height: 1.45; }
+.angle-item:last-child { border-bottom: none; padding-bottom: 0; }
+.angle-ic { color: var(--success); flex: none; }
+
+.remote-section { padding: 100px 0; background: var(--grad-dark); color: var(--white); border-top: 3px solid var(--ink); }
+.remote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.how-items { display: flex; flex-direction: column; gap: 0; }
+.how-item { display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,.08); align-items: flex-start; }
+.how-item:last-child { border-bottom: none; }
+.how-num { font-family: var(--font-mono); font-weight: 700; font-size: 22px; color: var(--gold); flex: none; width: 36px; }
+.how-title { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 16px; color: var(--white); margin-bottom: 4px; }
+.how-body { font-size: 14.5px; color: var(--steel-400); line-height: 1.5; }
+.remote-card { background: rgba(255,255,255,.04); border: 1.5px solid rgba(255,255,255,.10); border-radius: var(--r-xl); padding: 32px 28px; }
+.remote-card-head { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.10em; font-size: 11px; color: var(--gold); margin-bottom: 18px; }
+.rc-item { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 14.5px; color: var(--steel-300); }
+.rc-item:last-child { border-bottom: none; padding-bottom: 0; }
+.rc-chk { color: var(--success); flex: none; }
+
+@media (max-width: 900px) {
+  .state-grid  { grid-template-columns: 1fr; gap: 44px; }
+  .remote-grid { grid-template-columns: 1fr; }
+  .cities-list { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div id="topbar"></div>
+<header class="site-header" id="site-header"></header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-eyebrow">Service Areas</div>
+    <h1 class="page-hero-h1">Louisiana. Wisconsin.<br><span class="gold">Anywhere your Xero login works.</span></h1>
+    <p class="page-hero-intro">We're remote-first and have been since day one. We work with trades contractors across Louisiana and Wisconsin without ever needing an office visit. Your books don't care what time zone you're in.</p>
+    <div class="page-hero-ctas">
+      <button class="btn btn-red btn-lg" onclick="openModal()">
+        <i data-lucide="phone" style="width:17px;height:17px;"></i> Book a Free Checkup
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- LOUISIANA -->
+<section class="areas-split">
+  <div class="container">
+    <div class="state-grid">
+      <div>
+        <div class="state-badge la"><i data-lucide="map-pin" style="width:13px;height:13px;"></i> Louisiana</div>
+        <h2 class="state-h2">Louisiana Trades Contractors</h2>
+        <p class="state-intro">Baton Rouge is home. We've been working with Louisiana HVAC, plumbing, electrical, and general contracting businesses since we started. We know the seasonal cash swings, the hurricane prep cycles, and the way Louisiana summer heat turns HVAC into a sprint business.</p>
+        <div class="cities-list">
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Baton Rouge</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> New Orleans</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Lafayette</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Metairie</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Shreveport</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Lake Charles</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Monroe</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Alexandria</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Hammond</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Houma</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Slidell</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Covington</div>
+        </div>
+        <button class="btn btn-red btn-md" onclick="openModal()">Louisiana contractors: get a checkup</button>
+      </div>
+      <div class="state-angle">
+        <div class="state-angle-head">What's different about Louisiana books</div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Summer cash spike planning.</strong> Louisiana HVAC revenue can double from May to August and crash in January. We build reserve models around your actual seasonal curve.</span></div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Hurricane prep and recovery accounting.</strong> Emergency service surges after storms create unusual revenue and expense patterns. We categorize them correctly so your P&L makes sense year-over-year.</span></div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Louisiana-specific tax calendar.</strong> State and local tax filing dates, estimated payments, and sales tax on services are handled correctly every quarter.</span></div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Parish-level compliance awareness.</strong> Tax rules vary across parishes. We stay current so you don't get surprised.</span></div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Local lender relationships.</strong> When you need equipment financing or a line of credit, we know which documentation local lenders actually need.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WISCONSIN -->
+<section class="areas-split bg">
+  <div class="container">
+    <div class="state-grid">
+      <div class="state-angle">
+        <div class="state-angle-head">What's different about Wisconsin books</div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Hard seasonal swings.</strong> Wisconsin trades have an opposite cycle to Louisiana. Heating season is peak. Summer is slow for HVAC but busy for other trades. We model both.</span></div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Heating equipment and furnace inventory.</strong> Boilers, furnaces, and heat pump inventory have different depreciation schedules than cooling equipment. Handled correctly.</span></div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Wisconsin DOR filing calendar.</strong> State withholding, sales tax, and estimated payments handled on time every quarter so you're not caught off guard.</span></div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Union vs. non-union payroll complexity.</strong> Wisconsin construction trades often mix union and non-union labor. We keep the books clean for both.</span></div>
+        <div class="angle-item"><i data-lucide="check-circle" class="angle-ic" style="width:16px;height:16px;"></i><span><strong>Off-season cash strategy.</strong> Wisconsin shoulder seasons can be brutal. We build explicit off-season reserve plans into your monthly cash projection.</span></div>
+      </div>
+      <div>
+        <div class="state-badge wi"><i data-lucide="map-pin" style="width:13px;height:13px;"></i> Wisconsin</div>
+        <h2 class="state-h2">Wisconsin Trades Contractors</h2>
+        <p class="state-intro">Wisconsin is the other side of the seasonal ledger. Heating season drives HVAC and your slow months look completely different than what a Louisiana HVAC bookkeeper would expect. We built our Wisconsin practice around those differences.</p>
+        <div class="cities-list">
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Milwaukee</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Madison</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Green Bay</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Kenosha</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Racine</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Appleton</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Waukesha</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Oshkosh</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Eau Claire</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> La Crosse</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Janesville</div>
+          <div class="city-item"><i data-lucide="map-pin" class="city-ic" style="width:14px;height:14px;"></i> Sheboygan</div>
+        </div>
+        <button class="btn btn-red btn-md" onclick="openModal()">Wisconsin contractors: get a checkup</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW REMOTE WORKS -->
+<section class="remote-section">
+  <div class="container">
+    <div class="remote-grid">
+      <div>
+        <div class="section-label" style="color:var(--gold);">How remote bookkeeping works</div>
+        <h2 class="section-h2 light">You never need to come in.<br>Everything runs through Xero.</h2>
+        <div class="how-items">
+          <div class="how-item"><div class="how-num">01</div><div><div class="how-title">Free checkup call</div><div class="how-body">We talk on the phone. You describe where your books are. We tell you what it'll take to get them right. Takes 30 minutes.</div></div></div>
+          <div class="how-item"><div class="how-num">02</div><div><div class="how-title">You get set up in Xero</div><div class="how-body">We connect your bank accounts, bring over your chart of accounts, and get your data flowing. You don't need to do this yourself.</div></div></div>
+          <div class="how-item"><div class="how-num">03</div><div><div class="how-title">We handle the books monthly</div><div class="how-body">Reconciliation, categorization, payroll entry, job costing. All done before the 10th of each month. You get a summary that makes sense.</div></div></div>
+          <div class="how-item"><div class="how-num">04</div><div><div class="how-title">You make decisions with real numbers</div><div class="how-body">Clean books. Cash projection. Job-level margin. No surprises at tax time. You can run your business instead of chasing paperwork.</div></div></div>
+        </div>
+      </div>
+      <div class="remote-card">
+        <div class="remote-card-head">What you need to work with us</div>
+        <div class="rc-item"><i data-lucide="check-circle" class="rc-chk" style="width:16px;height:16px;"></i>A phone and an email address</div>
+        <div class="rc-item"><i data-lucide="check-circle" class="rc-chk" style="width:16px;height:16px;"></i>Business bank account access (read-only share)</div>
+        <div class="rc-item"><i data-lucide="check-circle" class="rc-chk" style="width:16px;height:16px;"></i>Access to your field software (Jobber, ServiceTitan, etc.)</div>
+        <div class="rc-item"><i data-lucide="check-circle" class="rc-chk" style="width:16px;height:16px;"></i>A pile of receipts you've been avoiding (we've seen worse)</div>
+        <div class="rc-item" style="border-top:1px solid rgba(255,255,255,.08);padding-top:16px;margin-top:8px;"><i data-lucide="x-circle" style="width:16px;height:16px;color:var(--red);flex:none;"></i>You do NOT need to be in Louisiana or Wisconsin</div>
+        <div class="rc-item"><i data-lucide="x-circle" style="width:16px;height:16px;color:var(--red);flex:none;"></i>You do NOT need to have clean books to start</div>
+        <div class="rc-item"><i data-lucide="x-circle" style="width:16px;height:16px;color:var(--red);flex:none;"></i>You do NOT need to know anything about accounting</div>
+        <div style="margin-top:24px;">
+          <button class="btn btn-red btn-lg" style="width:100%;" onclick="openModal()">
+            <i data-lucide="phone" style="width:17px;height:17px;"></i> Book Your Free Checkup
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY -->
+<div class="credibility">
+  <div class="cred-stripe"></div>
+  <div class="cred-inner">
+    <div class="cred-item"><div class="cred-big">2</div><div class="cred-name">States served</div><div class="cred-sub">with full local knowledge</div></div>
+    <div class="cred-item"><div class="cred-big">100%</div><div class="cred-name">Remote delivery</div><div class="cred-sub">no office visit needed</div></div>
+    <div class="cred-item"><div class="cred-big">10th</div><div class="cred-name">Books closed</div><div class="cred-sub">every month, every client</div></div>
+    <div class="cred-item"><div class="cred-big">Xero</div><div class="cred-name">Certified partner</div><div class="cred-sub">secure, cloud-based</div></div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container-sm final-inner">
+    <h2 class="final-h2">Louisiana or Wisconsin.<br>You're covered.</h2>
+    <p class="final-sub">Free 30-minute checkup. We'll tell you what your books need, what it'll cost, and when we can start.</p>
+    <div class="final-actions">
+      <button class="btn btn-ink btn-xl" onclick="openModal()">
+        <i data-lucide="phone" style="width:19px;height:19px;"></i> Book a Free Checkup
+      </button>
+      <a href="tel:2252746576" class="btn btn-ghost-white btn-xl">(225) 274-6576</a>
+    </div>
+    <p class="final-disclaimer">No judgment &middot; No contracts &middot; No commitment &middot; Mon&ndash;Sat 1:00p&ndash;9:00p</p>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="site.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

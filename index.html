@@ -1,0 +1,561 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q39996G5NK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q39996G5NK');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>911 Bookkeepers — When Your Business is Working But Your Books Aren't</title>
+<meta name="description" content="You're busy, you're billing, but you don't know if you're actually making money. 911 Bookkeepers fixes that. Baton Rouge, LA — built for contractors and trades businesses." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Saira+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Kaushan+Script&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="site.css" />
+<style>
+/* ---- Home-specific ---- */
+.hero {
+  background: var(--grad-dispatch); color: var(--white);
+  border-bottom: 3px solid var(--ink); overflow: hidden; position: relative;
+}
+.hero-ambient {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(900px 600px at 90% 50%, rgba(204,18,0,.18), transparent 65%);
+}
+.hero-grid {
+  position: absolute; inset: 0; pointer-events: none; opacity: .05;
+  background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+.hero-inner {
+  position: relative; max-width: 1160px; margin: 0 auto;
+  padding: 88px 28px 96px; display: grid;
+  grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 12px; border: 2px solid rgba(245,196,0,.5); border-radius: var(--r-sm);
+  font-family: var(--font-head); font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.14em; font-size: 11px; color: var(--gold-light); margin-bottom: 20px;
+}
+.hero-h1 {
+  font-family: var(--font-display); font-size: 58px; line-height: 1;
+  text-transform: uppercase; letter-spacing: -0.01em; margin: 0 0 16px;
+}
+.hero-h1 .gold { color: var(--gold); }
+.hero-intro { font-size: 18px; line-height: 1.55; color: var(--steel-300); max-width: 500px; margin: 0 0 32px; }
+.hero-intro strong { color: var(--white); font-weight: 700; }
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.hero-reassure { font-size: 13px; color: var(--steel-400); font-family: var(--font-mono); display: flex; align-items: center; gap: 6px; }
+
+.pain-card {
+  background: rgba(255,255,255,.04); border: 1.5px solid rgba(255,255,255,.12);
+  border-radius: var(--r-xl); padding: 28px 26px; backdrop-filter: blur(6px);
+}
+.pain-card-head {
+  font-family: var(--font-head); font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.10em; font-size: 11px; color: var(--gold);
+  margin-bottom: 18px; display: flex; align-items: center; gap: 8px;
+}
+.pain-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.08);
+  font-size: 15px; color: var(--steel-200); line-height: 1.4;
+}
+.pain-item:last-child { border-bottom: none; padding-bottom: 0; }
+.pain-item .xi { color: var(--red); flex: none; margin-top: 2px; }
+.pain-item em { font-style: normal; color: var(--white); font-weight: 600; }
+
+/* ---- Problems section ---- */
+.problems { background: var(--steel-50); padding: 100px 0; }
+.problems-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 56px; }
+.prob-card { background: var(--white); border: 2px solid var(--ink); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 180ms var(--ease-out), box-shadow 180ms; }
+.prob-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.prob-stripe { height: 6px; }
+.prob-body { padding: 26px 24px 28px; }
+.prob-num { font-family: var(--font-display); font-style: italic; font-size: 54px; line-height: 1; color: var(--steel-100); margin-bottom: -6px; }
+.prob-title { font-family: var(--font-head); font-weight: 800; text-transform: uppercase; font-size: 20px; letter-spacing: 0.02em; color: var(--ink); margin: 0 0 10px; line-height: 1.1; }
+.prob-text { font-size: 15px; line-height: 1.6; color: var(--steel-600); margin: 0 0 16px; }
+.prob-quote { font-style: italic; font-size: 15px; color: var(--steel-700); border-left: 3px solid var(--red); padding: 10px 16px; background: var(--steel-50); border-radius: 0 var(--r-md) var(--r-md) 0; }
+
+/* ---- Real cost ---- */
+.real-cost {
+  background: var(--grad-dark); color: var(--white);
+  padding: 100px 0; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink);
+  position: relative; overflow: hidden;
+}
+.real-cost::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(900px 600px at 15% 50%, rgba(204,18,0,.12), transparent 65%);
+}
+.cost-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.cost-items { display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
+.cost-item { display: flex; gap: 18px; align-items: flex-start; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+.cost-item:last-child { border-bottom: none; }
+.cost-ic { width: 44px; height: 44px; border-radius: var(--r-md); border: 2px solid var(--ink); display: flex; align-items: center; justify-content: center; flex: none; background: rgba(204,18,0,.18); color: var(--red); }
+.cost-item-title { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 16px; color: var(--white); margin-bottom: 4px; }
+.cost-item-body { font-size: 14.5px; line-height: 1.55; color: var(--steel-400); }
+.scenarios-card {
+  background: rgba(255,255,255,.04); border: 1.5px solid rgba(255,255,255,.10);
+  border-radius: var(--r-xl); padding: 32px 28px; position: relative;
+}
+.scenarios-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--stripe-hazard); border-radius: var(--r-xl) var(--r-xl) 0 0; }
+.sc-head { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.10em; font-size: 11px; color: var(--gold); margin-bottom: 20px; margin-top: 8px; }
+.sc { margin-bottom: 26px; }
+.sc-label { font-family: var(--font-mono); font-size: 11px; color: var(--steel-500); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.sc-text { font-size: 15px; line-height: 1.5; color: var(--steel-200); }
+.sc-text strong { color: var(--white); }
+.sc-amount { font-family: var(--font-mono); font-weight: 700; font-size: 28px; color: var(--red); margin-top: 6px; }
+.sc-divider { border: none; border-top: 1px solid rgba(255,255,255,.08); margin: 6px 0 22px; }
+
+/* ---- Before / After ---- */
+.transformation { padding: 100px 0; background: var(--white); }
+.ba-wrap { display: grid; grid-template-columns: 1fr 52px 1fr; gap: 0; align-items: stretch; margin: 56px 0 60px; }
+.ba-col { border: 2px solid var(--ink); border-radius: var(--r-lg); overflow: hidden; }
+.ba-head { padding: 14px 20px; font-family: var(--font-head); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; font-size: 14px; display: flex; align-items: center; gap: 8px; color: #fff; }
+.ba-head.before { background: var(--steel-800); }
+.ba-head.after  { background: var(--red); }
+.ba-body { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.ba-row { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.45; color: var(--steel-700); padding: 10px 12px; border-radius: var(--r-md); background: var(--steel-50); }
+.ba-row.ok  { background: var(--success-bg); color: var(--steel-800); }
+.ba-x  { color: var(--red); flex: none; margin-top: 1px; }
+.ba-ok { color: var(--success); flex: none; margin-top: 1px; }
+.arrow-col { display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-style: italic; font-size: 38px; color: var(--red); }
+
+/* ---- Outcomes ---- */
+.outcomes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.outcome-card { background: var(--white); border: 2px solid var(--ink); border-radius: var(--r-lg); padding: 30px 26px; box-shadow: var(--shadow-sm); }
+.outcome-num { font-family: var(--font-mono); font-weight: 700; font-size: 42px; color: var(--red); line-height: 1; margin-bottom: 6px; }
+.outcome-label { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; font-size: 17px; color: var(--ink); margin-bottom: 8px; }
+.outcome-body { font-size: 14.5px; line-height: 1.55; color: var(--steel-500); }
+
+/* ---- About ---- */
+.about { background: var(--white); padding: 100px 0; border-top: 2px solid var(--steel-200); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.about-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border: 2px solid var(--red); border-radius: var(--r-pill); font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; color: var(--red); margin-bottom: 18px; }
+.about-h2 { font-family: var(--font-head); font-weight: 800; text-transform: uppercase; font-size: 36px; line-height: 1.06; color: var(--ink); margin-bottom: 18px; }
+.about-p { font-size: 16px; line-height: 1.65; color: var(--steel-600); margin-bottom: 16px; }
+.about-p strong { color: var(--ink); }
+.about-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+.about-tag { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; background: var(--steel-50); border: 2px solid var(--steel-200); border-radius: var(--r-pill); font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; color: var(--steel-700); }
+.about-tag svg { color: var(--red); }
+.about-card { background: var(--steel-50); border: 2px solid var(--ink); border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-lg); }
+.about-card-stripe { height: 7px; background: var(--stripe-alert); }
+.about-card-body { padding: 28px 26px; }
+.about-card-lbl { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.10em; font-size: 11px; color: var(--red); margin-bottom: 16px; }
+.about-fact { display: flex; gap: 12px; align-items: flex-start; padding: 13px 0; border-bottom: 1px solid var(--steel-200); }
+.about-fact:last-child { border-bottom: none; padding-bottom: 0; }
+.about-fact-ic { color: var(--red); flex: none; margin-top: 1px; }
+.about-fact-title { font-family: var(--font-head); font-weight: 700; font-size: 15px; text-transform: uppercase; color: var(--ink); margin-bottom: 2px; }
+.about-fact-body { font-size: 13.5px; color: var(--steel-500); line-height: 1.4; }
+
+/* ---- Pricing ---- */
+.pricing { background: var(--steel-50); padding: 100px 0; border-top: 2px solid var(--steel-200); }
+.billing-wrap { display: flex; justify-content: center; margin-bottom: 44px; }
+.billing-inner { display: inline-flex; background: var(--white); border: 2px solid var(--ink); border-radius: var(--r-pill); padding: 4px; box-shadow: var(--shadow-sm); }
+.bill-btn { border: none; padding: 9px 22px; border-radius: var(--r-pill); font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; background: transparent; color: var(--steel-600); transition: background 120ms, color 120ms; cursor: pointer; }
+.bill-btn.active { background: var(--red); color: #fff; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+/* Plan cards — tool card frame; featured = navy bg + gold accents */
+.plan-card { background: var(--white); border: 2px solid var(--ink); border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-md); display: flex; flex-direction: column; transition: transform 180ms var(--ease-out), box-shadow 180ms; }
+.plan-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.plan-card.featured { background: var(--grad-dispatch); transform: translateY(-12px); }
+.plan-card.featured:hover { transform: translateY(-16px); }
+.plan-top-std  { height: 6px; background: var(--red); }
+.plan-top-feat { height: 10px; background: var(--stripe-hazard); }
+.plan-top-prem { height: 6px; background: var(--gold); }
+.plan-wrap { padding: 28px 26px; flex: 1; display: flex; flex-direction: column; }
+.plan-pop { display: inline-block; padding: 3px 10px; border-radius: var(--r-pill); background: var(--gold); color: var(--ink); border: 2px solid var(--ink); font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 10px; margin-bottom: 10px; }
+.plan-name { font-family: var(--font-head); font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; font-size: 22px; margin-bottom: 4px; color: var(--ink); }
+.plan-card.featured .plan-name { color: var(--white); }
+.plan-who { font-size: 13.5px; color: var(--steel-500); margin-bottom: 18px; min-height: 36px; }
+.plan-card.featured .plan-who { color: var(--steel-300); }
+.plan-outcome { background: var(--success-bg); border-radius: var(--r-md); border: 1px solid #A7F3D0; padding: 10px 14px; margin-bottom: 20px; font-size: 13.5px; color: var(--steel-800); line-height: 1.45; }
+.plan-outcome strong { color: var(--success); font-weight: 600; }
+.plan-card.featured .plan-outcome { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.15); color: var(--steel-200); }
+.plan-card.featured .plan-outcome strong { color: var(--gold); }
+.plan-price-row { display: flex; align-items: baseline; gap: 5px; margin-bottom: 4px; }
+.plan-amt { font-family: var(--font-mono); font-weight: 700; font-size: 44px; letter-spacing: -0.03em; color: var(--ink); }
+.plan-card.featured .plan-amt { color: var(--gold); }
+.plan-per { font-size: 13px; color: var(--steel-500); }
+.plan-card.featured .plan-per { color: var(--steel-400); }
+.plan-bill { font-size: 11.5px; color: var(--steel-400); margin-bottom: 20px; font-family: var(--font-mono); }
+.plan-card.featured .plan-bill { color: var(--steel-500); }
+.plan-cta-btn { display: block; width: 100%; margin-bottom: 20px; }
+.plan-div { border: none; border-top: 1px solid var(--steel-200); margin: 0 0 18px; }
+.plan-card.featured .plan-div { border-color: rgba(255,255,255,.15); }
+.plan-feats { display: flex; flex-direction: column; gap: 10px; }
+.plan-feat { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: var(--steel-700); }
+.plan-card.featured .plan-feat { color: var(--steel-300); }
+.feat-chk { color: var(--success); flex: none; margin-top: 1px; }
+.plan-card.featured .feat-chk { color: var(--gold); }
+
+@media (max-width: 960px) {
+  .hero-inner    { grid-template-columns: 1fr; gap: 44px; padding: 60px 28px 72px; }
+  .hero-h1       { font-size: 46px; }
+  .problems-grid { grid-template-columns: 1fr; }
+  .cost-grid     { grid-template-columns: 1fr; gap: 44px; }
+  .about-grid    { grid-template-columns: 1fr; }
+  .ba-wrap       { grid-template-columns: 1fr; }
+  .arrow-col     { display: none; }
+  .pricing-grid  { grid-template-columns: 1fr; }
+  .plan-card.featured { transform: none; }
+  .outcomes-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .hero-h1 { font-size: 36px; }
+}
+</style>
+</head>
+<body>
+<div id="topbar"></div>
+<header class="site-header" id="site-header"></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ambient"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">
+        <i data-lucide="siren" style="width:13px;height:13px;"></i>
+        Financial First Responders &middot; Baton Rouge, LA
+      </div>
+      <h1 class="hero-h1">Your business<br>is working.<br><span class="gold">Your books<br>aren't.</span></h1>
+      <p class="hero-intro">You're busy, you're billing, and your crew shows up every day. But you can't tell if you actually made money last month &mdash; and <strong>that uncertainty is costing you.</strong></p>
+      <div class="hero-ctas">
+        <button class="btn btn-red btn-lg" onclick="openModal()">
+          <i data-lucide="phone" style="width:17px;height:17px;"></i> Get a Free Checkup
+        </button>
+        <a href="#problems" class="btn btn-ghost-white btn-lg">
+          See if this is you <i data-lucide="arrow-down" style="width:16px;height:16px;"></i>
+        </a>
+      </div>
+      <div class="hero-reassure">
+        <i data-lucide="shield-check" style="width:14px;height:14px;color:#1F9D55;"></i>
+        No judgment &middot; No contracts &middot; Free first call
+      </div>
+    </div>
+    <div>
+      <div class="pain-card">
+        <div class="pain-card-head">
+          <i data-lucide="alert-triangle" style="width:14px;height:14px;"></i>
+          Does this sound like you?
+        </div>
+        <div class="pain-item"><span class="xi"><i data-lucide="x-circle" style="width:18px;height:18px;"></i></span><span>You had a great month of sales but the bank account doesn't show it</span></div>
+        <div class="pain-item"><span class="xi"><i data-lucide="x-circle" style="width:18px;height:18px;"></i></span><span>Your books are <em>months behind</em> and you're scared to find out what's in there</span></div>
+        <div class="pain-item"><span class="xi"><i data-lucide="x-circle" style="width:18px;height:18px;"></i></span><span>You give bids <em>by gut feel</em> because you don't know your actual job costs</span></div>
+        <div class="pain-item"><span class="xi"><i data-lucide="x-circle" style="width:18px;height:18px;"></i></span><span>Tax time turns into a panic &mdash; scrambling to find receipts from eight months ago</span></div>
+        <div class="pain-item"><span class="xi"><i data-lucide="x-circle" style="width:18px;height:18px;"></i></span><span>You can't tell if you can afford another truck, another tech, or a raise</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="problems" id="problems">
+  <div class="container">
+    <div class="section-label">The real problems we solve</div>
+    <h2 class="section-h2">Bad books aren't a bookkeeping problem.<br>They're a business problem.</h2>
+    <p class="section-intro">When your numbers are a mess, every decision you make is a guess. Here's what that actually costs trade business owners.</p>
+    <div class="problems-grid">
+      <div class="prob-card">
+        <div class="prob-stripe" style="background:var(--red);"></div>
+        <div class="prob-body">
+          <div class="prob-num">01</div>
+          <h3 class="prob-title">You don't know which jobs make money</h3>
+          <p class="prob-text">You're doing $500K in revenue and working 60-hour weeks, but you're not sure you're actually profitable. Some jobs feel good. Some feel like you bled out. Without job costing, you're guessing every time you write a bid.</p>
+          <blockquote class="prob-quote">"We kept winning more work and somehow felt more broke every month."</blockquote>
+        </div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-stripe" style="background:var(--gold);"></div>
+        <div class="prob-body">
+          <div class="prob-num">02</div>
+          <h3 class="prob-title">Cash flow surprises are running your life</h3>
+          <p class="prob-text">You're profitable on paper but can't make payroll Friday. Or tax season hits and there's a bill you never saw coming. Cash flow problems don't mean your business is failing &mdash; they usually mean nobody is watching the calendar.</p>
+          <blockquote class="prob-quote">"The IRS said I owed $28K. My bookkeeper said everything was fine."</blockquote>
+        </div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-stripe" style="background:var(--navy);"></div>
+        <div class="prob-body">
+          <div class="prob-num">03</div>
+          <h3 class="prob-title">You can't make decisions because you don't have data</h3>
+          <p class="prob-text">Should you hire another tech? Buy or lease the new truck? Take on that big commercial contract? Every one of those decisions needs numbers behind it. If your books are three months behind, you're flying blind.</p>
+          <blockquote class="prob-quote">"I hired two guys based on how busy we felt. The books said we couldn't afford one."</blockquote>
+        </div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-stripe" style="background:var(--steel-400);"></div>
+        <div class="prob-body">
+          <div class="prob-num">04</div>
+          <h3 class="prob-title">Tax time is a fire drill every year</h3>
+          <p class="prob-text">The same thing happens every January: your CPA asks for records you don't have, you spend weeks digging through bank statements, and you pay more than you should because nobody was tracking deductions in real time.</p>
+          <blockquote class="prob-quote">"My CPA found $18K in deductions I'd been leaving on the table for three years."</blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REAL COST -->
+<section class="real-cost">
+  <div class="container">
+    <div class="cost-grid">
+      <div>
+        <div class="section-label" style="color:var(--gold);">What it's actually costing you</div>
+        <h2 class="section-h2 light">Messy books<br>aren't free.</h2>
+        <p class="section-intro" style="color:var(--steel-400);margin-bottom:8px;">Every month without clean financials is a month you're overpaying taxes, underpricing jobs, and making decisions on bad information.</p>
+        <div class="cost-items">
+          <div class="cost-item">
+            <div class="cost-ic"><i data-lucide="trending-down" style="width:20px;height:20px;stroke-width:2.25;"></i></div>
+            <div><div class="cost-item-title">Underpriced jobs</div><div class="cost-item-body">Without job costing, most contractors underprice their most profitable work types and overload the ones that bleed money. This compounds every bid.</div></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-ic"><i data-lucide="receipt" style="width:20px;height:20px;stroke-width:2.25;"></i></div>
+            <div><div class="cost-item-title">Missed deductions</div><div class="cost-item-body">Tools, fuel, mileage, home office, equipment depreciation &mdash; these disappear without real-time tracking. Most of our clients recover $5K&ndash;$25K in year one.</div></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-ic"><i data-lucide="alert-circle" style="width:20px;height:20px;stroke-width:2.25;"></i></div>
+            <div><div class="cost-item-title">Late fees and penalties</div><div class="cost-item-body">Payroll taxes, estimated taxes, sales tax &mdash; all carry penalties that hit hard when you're not watching the calendar. Completely avoidable.</div></div>
+          </div>
+          <div class="cost-item">
+            <div class="cost-ic"><i data-lucide="brain" style="width:20px;height:20px;stroke-width:2.25;"></i></div>
+            <div><div class="cost-item-title">Decisions made on bad data</div><div class="cost-item-body">Every hire, every equipment decision, every price increase you delayed &mdash; it adds up. Clear numbers don't just save money. They give you your time back.</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="scenarios-card">
+          <div class="sc-head">Real cleanups we've done</div>
+          <div class="sc">
+            <div class="sc-label">HVAC contractor &middot; Baton Rouge</div>
+            <div class="sc-text"><strong>14 months behind on books.</strong> Found $40K in uncategorized expenses being taxed as income. Recovered three years of missed equipment depreciation.</div>
+            <div class="sc-amount">$40K+ recovered</div>
+          </div>
+          <hr class="sc-divider" />
+          <div class="sc">
+            <div class="sc-label">Electrical contractor &middot; growing crew</div>
+            <div class="sc-text"><strong>Couldn't figure out why payroll felt impossible</strong> despite a record revenue year. Job costing revealed two service types were being sold at a net loss.</div>
+            <div class="sc-amount">Margin fixed in 60 days</div>
+          </div>
+          <hr class="sc-divider" />
+          <div class="sc" style="margin-bottom:0;">
+            <div class="sc-label">Plumbing company &middot; 3 trucks</div>
+            <div class="sc-text"><strong>IRS audit triggered by sloppy expense categorization.</strong> Clean books and proper records meant no penalties. Previous three years amended and refunded.</div>
+            <div class="sc-amount">$0 penalties &middot; refund issued</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="transformation" id="transformation">
+  <div class="container">
+    <div class="section-label">What actually changes</div>
+    <h2 class="section-h2">From flying blind to running the numbers</h2>
+    <div class="ba-wrap">
+      <div class="ba-col">
+        <div class="ba-head before"><i data-lucide="x" style="width:16px;height:16px;"></i> Right now</div>
+        <div class="ba-body">
+          <div class="ba-row"><span class="ba-x"><i data-lucide="x-circle" style="width:16px;height:16px;"></i></span>Tax bills that blindside you</div>
+          <div class="ba-row"><span class="ba-x"><i data-lucide="x-circle" style="width:16px;height:16px;"></i></span>Bids priced on instinct, not data</div>
+          <div class="ba-row"><span class="ba-x"><i data-lucide="x-circle" style="width:16px;height:16px;"></i></span>Months behind, scared to look</div>
+          <div class="ba-row"><span class="ba-x"><i data-lucide="x-circle" style="width:16px;height:16px;"></i></span>Payroll Friday stress</div>
+          <div class="ba-row"><span class="ba-x"><i data-lucide="x-circle" style="width:16px;height:16px;"></i></span>No way to know if a hire makes sense</div>
+          <div class="ba-row"><span class="ba-x"><i data-lucide="x-circle" style="width:16px;height:16px;"></i></span>Scrambling every January for your CPA</div>
+          <div class="ba-row"><span class="ba-x"><i data-lucide="x-circle" style="width:16px;height:16px;"></i></span>Revenue looks good, bank account doesn't</div>
+        </div>
+      </div>
+      <div class="arrow-col">&rarr;</div>
+      <div class="ba-col">
+        <div class="ba-head after"><i data-lucide="check" style="width:16px;height:16px;"></i> After we're done</div>
+        <div class="ba-body">
+          <div class="ba-row ok"><span class="ba-ok"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></span>Quarterly tax estimates, no surprises</div>
+          <div class="ba-row ok"><span class="ba-ok"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></span>Job costing that tells you what to charge</div>
+          <div class="ba-row ok"><span class="ba-ok"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></span>Books closed by the 10th, every month</div>
+          <div class="ba-row ok"><span class="ba-ok"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></span>90-day cash flow you can count on</div>
+          <div class="ba-row ok"><span class="ba-ok"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></span>Hire or hold decisions backed by data</div>
+          <div class="ba-row ok"><span class="ba-ok"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></span>Year-end is a non-event. Your CPA thanks you.</div>
+          <div class="ba-row ok"><span class="ba-ok"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></span>You know your numbers. Every month.</div>
+        </div>
+      </div>
+    </div>
+    <div class="outcomes-grid">
+      <div class="outcome-card"><div class="outcome-num">$5K&ndash;$25K</div><div class="outcome-label">Recovered year one</div><div class="outcome-body">Average in missed deductions, overpaid taxes, and caught errors for new clients in their first year.</div></div>
+      <div class="outcome-card"><div class="outcome-num">10th</div><div class="outcome-label">Books closed every month</div><div class="outcome-body">Clean P&L, balance sheet, and plain-English summary by the 10th. No chasing. No lag.</div></div>
+      <div class="outcome-card"><div class="outcome-num">90 days</div><div class="outcome-label">Cash flow visibility</div><div class="outcome-body">See where your cash is going and when. No more Friday morning dread before payroll runs.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY -->
+<div class="credibility">
+  <div class="cred-stripe"></div>
+  <div class="cred-inner">
+    <div class="cred-item"><div class="cred-big">480+</div><div class="cred-name">Books rescued</div><div class="cred-sub">trade businesses</div></div>
+    <div class="cred-item"><div class="cred-big">$3.2M</div><div class="cred-name">Tax savings found</div><div class="cred-sub">returned to clients</div></div>
+    <div class="cred-item"><div class="cred-big">&lt; 24h</div><div class="cred-name">First response</div><div class="cred-sub">to every checkup call</div></div>
+    <div class="cred-item"><div class="cred-big">100%</div><div class="cred-name">Closed by the 10th</div><div class="cred-sub">every single month</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="about-badge"><i data-lucide="shield" style="width:12px;height:12px;"></i> Why we're different</div>
+        <h2 class="about-h2">Built by someone who's been on the job site</h2>
+        <p class="about-p"><strong>Jeremy Brewer</strong> spent years as a licensed paramedic and HVAC field worker before becoming a bookkeeper. He didn't come from a CPA firm. He came from the trades.</p>
+        <p class="about-p">That means he understands what it's like to run a crew, price a job, and wonder at the end of the month where the money went. He built 911 Bookkeepers because most bookkeeping firms don't understand what a contractor's books need to look like.</p>
+        <p class="about-p">We use <strong>Xero</strong> &mdash; not because it's the cheapest option, but because it's the right tool for job costing, cash flow forecasting, and the kind of clean reporting that actually helps you run your business.</p>
+        <div class="about-tags">
+          <span class="about-tag"><i data-lucide="check-circle" style="width:13px;height:13px;"></i>Xero Certified</span>
+          <span class="about-tag"><i data-lucide="check-circle" style="width:13px;height:13px;"></i>Licensed Paramedic</span>
+          <span class="about-tag"><i data-lucide="check-circle" style="width:13px;height:13px;"></i>HVAC Field Background</span>
+          <span class="about-tag"><i data-lucide="check-circle" style="width:13px;height:13px;"></i>Baton Rouge, LA</span>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-stripe"></div>
+        <div class="about-card-body">
+          <div class="about-card-lbl">How we work with you</div>
+          <div class="about-fact"><span class="about-fact-ic"><i data-lucide="phone" style="width:18px;height:18px;stroke-width:2.25;"></i></span><div><div class="about-fact-title">Free checkup call first</div><div class="about-fact-body">We assess where your books are and tell you exactly what it'll take to fix them. No commitment.</div></div></div>
+          <div class="about-fact"><span class="about-fact-ic"><i data-lucide="wrench" style="width:18px;height:18px;stroke-width:2.25;"></i></span><div><div class="about-fact-title">Catch-up first, then monthly</div><div class="about-fact-body">If you're behind, we get you current before monthly maintenance. You know the full scope upfront.</div></div></div>
+          <div class="about-fact"><span class="about-fact-ic"><i data-lucide="bar-chart-2" style="width:18px;height:18px;stroke-width:2.25;"></i></span><div><div class="about-fact-title">Monthly dashboard, plain English</div><div class="about-fact-body">Every month you get a report you can actually read. Not spreadsheet soup. Numbers you can use.</div></div></div>
+          <div class="about-fact"><span class="about-fact-ic"><i data-lucide="message-circle" style="width:18px;height:18px;stroke-width:2.25;"></i></span><div><div class="about-fact-title">You talk to a person</div><div class="about-fact-body">No offshore team, no ticket queue. A dedicated bookkeeper who knows your business.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--steel-50);padding:100px 0;border-top:2px solid var(--steel-200);">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px;">
+      <div class="section-label">What contractors say</div>
+      <h2 class="section-h2">The books aren't the story. The business is.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-top"></div><div class="testi-body"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-quote">"We were 14 months behind and dreading an audit. 911 Bookkeepers had us current in five weeks and <em>caught $40K we'd overpaid</em>. Now I actually know which jobs make money."</p><div class="testi-attr"><div class="testi-avatar">DM</div><div><div class="testi-name">Dave Morales</div><div class="testi-title">Morales Electric &amp; Solar</div></div></div></div></div>
+      <div class="testi-card"><div class="testi-top"></div><div class="testi-body"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-quote">"I used to dread opening my email in January. Now tax season is just another month. <em>My CPA actually complimented my books.</em> Never thought I'd say that."</p><div class="testi-attr"><div class="testi-avatar">RL</div><div><div class="testi-name">Rico LeBlanc</div><div class="testi-title">Bayou HVAC Services</div></div></div></div></div>
+      <div class="testi-card"><div class="testi-top"></div><div class="testi-body"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testi-quote">"Jeremy figured out we were losing money on residential service calls. <em>We repriced in April and hit our best margin ever by July.</em>"</p><div class="testi-attr"><div class="testi-avatar">TC</div><div><div class="testi-name">Tara Comeaux</div><div class="testi-title">Comeaux Plumbing, 3 trucks</div></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:8px;">
+      <div class="section-label">Pick your level</div>
+      <h2 class="section-h2">Plans built for where you are</h2>
+      <p class="section-intro center" style="margin-top:12px;margin-bottom:44px;">No setup fees. Month-to-month after the first quarter. Catch-up work quoted separately after your free checkup.</p>
+    </div>
+    <div class="billing-wrap">
+      <div class="billing-inner">
+        <button class="bill-btn" id="bill-mo" onclick="setBilling('monthly')">Monthly</button>
+        <button class="bill-btn active" id="bill-yr" onclick="setBilling('annual')">Annual &middot; save 15%</button>
+      </div>
+    </div>
+    <div class="pricing-grid">
+      <div class="plan-card"><div class="plan-top-std"></div><div class="plan-wrap">
+        <div class="plan-name">First Responder</div>
+        <div class="plan-who">For owner-operators who need clean books and no surprises.</div>
+        <div class="plan-outcome"><strong>You'll know your numbers</strong> every month without touching your books.</div>
+        <div class="plan-price-row"><span class="plan-amt" data-monthly="349" data-annual="297">$297</span><span class="plan-per">/mo</span></div>
+        <div class="plan-bill" id="t1-bill">billed annually</div>
+        <button class="btn btn-ink btn-lg plan-cta-btn" onclick="openModal()">Get Started</button>
+        <hr class="plan-div" />
+        <div class="plan-feats">
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Monthly reconciliation</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Up to 2 bank/credit accounts</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Quarterly P&amp;L + Balance Sheet</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Email support, 48h response</span></div>
+        </div>
+      </div></div>
+      <div class="plan-card featured"><div class="plan-top-feat"></div><div class="plan-wrap">
+        <div class="plan-pop">Most Popular</div>
+        <div class="plan-name">Engine Company</div>
+        <div class="plan-who">For growing crews that need numbers to run on.</div>
+        <div class="plan-outcome"><strong>You'll know which jobs make money</strong> and have a 90-day cash window every month.</div>
+        <div class="plan-price-row"><span class="plan-amt" data-monthly="649" data-annual="552">$552</span><span class="plan-per">/mo</span></div>
+        <div class="plan-bill" id="t2-bill">billed annually</div>
+        <button class="btn btn-red btn-lg plan-cta-btn" onclick="openModal()">Get Started</button>
+        <hr class="plan-div" />
+        <div class="plan-feats">
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Everything in First Responder</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Up to 6 accounts + payroll for 10</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Books closed by the 10th</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Job costing &amp; profit by project</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>90-day cash flow projection</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Dedicated responder, 24h response</span></div>
+        </div>
+      </div></div>
+      <div class="plan-card"><div class="plan-top-prem"></div><div class="plan-wrap">
+        <div class="plan-name">Battalion Chief</div>
+        <div class="plan-who">For multi-crew shops that need a full finance command center.</div>
+        <div class="plan-outcome"><strong>CFO-level visibility</strong> without hiring a CFO. Weekly cash, monthly strategy call.</div>
+        <div class="plan-price-row"><span class="plan-amt" data-monthly="1149" data-annual="977">$977</span><span class="plan-per">/mo</span></div>
+        <div class="plan-bill" id="t3-bill">billed annually</div>
+        <button class="btn btn-ink btn-lg plan-cta-btn" onclick="openModal()">Get Started</button>
+        <hr class="plan-div" />
+        <div class="plan-feats">
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Everything in Engine Company</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Unlimited accounts + full payroll</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Weekly cash-flow update</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Monthly CFO strategy call</span></div>
+          <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Priority line, same-day response</span></div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container-sm final-inner">
+    <h2 class="final-h2">You built the business.<br>Let us fix the books.</h2>
+    <p class="final-sub">Free 30-minute checkup. We'll tell you exactly what's wrong, what it'll cost to fix, and what your books should look like going forward.</p>
+    <div class="final-actions">
+      <button class="btn btn-ink btn-xl" onclick="openModal()">
+        <i data-lucide="phone" style="width:19px;height:19px;"></i> Book a Free Checkup
+      </button>
+      <a href="tel:2252746576" class="btn btn-ghost-white btn-xl">(225) 274-6576</a>
+    </div>
+    <p class="final-disclaimer">No judgment &middot; No contracts &middot; No commitment &middot; We've seen worse</p>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script>
+lucide.createIcons();
+let billing = 'annual';
+function setBilling(m) {
+  billing = m;
+  document.getElementById('bill-mo').classList.toggle('active', m==='monthly');
+  document.getElementById('bill-yr').classList.toggle('active', m==='annual');
+  document.querySelectorAll('.plan-amt').forEach(el => {
+    el.textContent = '$' + (m==='annual' ? Math.round(+el.dataset.monthly*.85) : +el.dataset.monthly).toLocaleString();
+  });
+  ['t1-bill','t2-bill','t3-bill'].forEach(id => {
+    document.getElementById(id).textContent = m==='annual' ? 'billed annually' : 'billed monthly';
+  });
+}
+</script>
+<script src="site.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

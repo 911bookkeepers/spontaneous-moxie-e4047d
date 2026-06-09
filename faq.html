@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q39996G5NK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q39996G5NK');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FAQ — 911 Bookkeepers LLC</title>
+<meta name="description" content="Frequently asked questions about 911 Bookkeepers. Pricing, how we work, Xero, getting started, and what's included. Honest answers, no sales talk." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Saira+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Kaushan+Script&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="site.css" />
+<style>
+.faq-layout { padding: 80px 0 120px; }
+.faq-wrap { display: grid; grid-template-columns: 260px 1fr; gap: 60px; align-items: start; }
+.faq-nav { position: sticky; top: 88px; }
+.faq-nav-head { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.10em; font-size: 11px; color: var(--steel-500); margin-bottom: 12px; }
+.faq-nav-links { display: flex; flex-direction: column; gap: 2px; }
+.faq-nav-link { padding: 9px 14px; border-radius: var(--r-md); font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; color: var(--steel-600); text-decoration: none; transition: background 120ms, color 120ms; border: none; background: none; cursor: pointer; text-align: left; }
+.faq-nav-link:hover { background: var(--steel-100); color: var(--ink); }
+.faq-nav-link.active { background: var(--red); color: #fff; }
+
+.faq-content { display: flex; flex-direction: column; gap: 56px; }
+.faq-group {}
+.faq-group-head { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--ink); }
+.faq-group-ic { width: 40px; height: 40px; border-radius: var(--r-md); border: 2px solid var(--ink); display: flex; align-items: center; justify-content: center; background: var(--steel-50); color: var(--red); flex: none; }
+.faq-group-title { font-family: var(--font-head); font-weight: 800; text-transform: uppercase; font-size: 22px; color: var(--ink); }
+.faq-items { display: flex; flex-direction: column; gap: 0; }
+.faq-item { border-bottom: 1px solid var(--steel-200); }
+.faq-q { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 20px 0; cursor: pointer; }
+.faq-q-text { font-family: var(--font-head); font-weight: 700; font-size: 17px; color: var(--ink); line-height: 1.25; flex: 1; }
+.faq-toggle { color: var(--red); flex: none; transition: transform 200ms; }
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+.faq-a { display: none; padding: 0 0 20px; font-size: 15.5px; line-height: 1.7; color: var(--steel-600); }
+.faq-a p { margin: 0 0 12px; }
+.faq-a p:last-child { margin: 0; }
+.faq-a strong { color: var(--ink); }
+.faq-a ul { margin: 8px 0 12px 20px; display: flex; flex-direction: column; gap: 6px; }
+.faq-item.open .faq-a { display: block; }
+
+.faq-billing-wrap { display: flex; margin: 16px 0 20px; }
+.faq-plan-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.faq-plan-grid .plan-card { border: 2px solid var(--steel-300); box-shadow: var(--shadow-sm); background: var(--white); }
+.faq-plan-grid .plan-card.featured { border: 3px solid var(--red); box-shadow: 0 0 0 3px rgba(204,18,0,.10), var(--shadow-md); transform: none; background: var(--white); }
+.faq-plan-grid .plan-amt { font-size: 34px; }
+.faq-plan-grid .plan-card.featured .plan-amt { color: var(--red); }
+.faq-plan-grid .plan-name { font-size: 17px; }
+.faq-plan-grid .plan-card.featured .plan-name,
+.faq-plan-grid .plan-card.featured .plan-who,
+.faq-plan-grid .plan-card.featured .plan-bill,
+.faq-plan-grid .plan-card.featured .plan-feat { color: var(--ink); }
+.faq-plan-grid .plan-card.featured .plan-who { color: var(--steel-500); }
+.faq-plan-grid .plan-card.featured .plan-bill { color: var(--steel-400); }
+.faq-plan-grid .plan-card.featured .plan-feat { color: var(--steel-700); }
+.faq-plan-grid .plan-card.featured .plan-div { border-color: var(--steel-200); }
+.faq-plan-grid .plan-card.featured .feat-chk { color: var(--success); }
+
+@media (max-width: 900px) {
+  .faq-plan-grid { grid-template-columns: 1fr; }
+  .faq-wrap { grid-template-columns: 1fr; }
+  .faq-nav  { position: static; display: none; }
+  .pt-head, .pt-row { grid-template-columns: 1fr 1fr; }
+  .pt-head div:nth-child(n+3), .pt-row div:nth-child(n+3) { display: none; }
+}
+</style>
+</head>
+<body>
+<div id="topbar"></div>
+<header class="site-header" id="site-header"></header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-eyebrow">Frequently Asked Questions</div>
+    <h1 class="page-hero-h1">Real answers.<br><span class="gold">No sales talk.</span></h1>
+    <p class="page-hero-intro">If you have a question that isn't here, call us. We'd rather talk it through in 10 minutes than have you guessing.</p>
+  </div>
+</section>
+
+<!-- FAQ LAYOUT -->
+<section class="faq-layout">
+  <div class="container">
+    <div class="faq-wrap">
+      <div class="faq-nav">
+        <div class="faq-nav-head">Jump to section</div>
+        <div class="faq-nav-links">
+          <button class="faq-nav-link active" onclick="jumpTo('pricing',this)">Pricing</button>
+          <button class="faq-nav-link" onclick="jumpTo('services',this)">Services</button>
+          <button class="faq-nav-link" onclick="jumpTo('getting-started',this)">Getting Started</button>
+          <button class="faq-nav-link" onclick="jumpTo('software',this)">Xero &amp; Software</button>
+          <button class="faq-nav-link" onclick="jumpTo('catchup',this)">Catch-Up Work</button>
+        </div>
+      </div>
+
+      <div class="faq-content">
+
+        <!-- PRICING -->
+        <div class="faq-group" id="pricing">
+          <div class="faq-group-head">
+            <div class="faq-group-ic"><i data-lucide="tag" style="width:20px;height:20px;stroke-width:2.25;"></i></div>
+            <div class="faq-group-title">Pricing</div>
+          </div>
+          <div class="faq-items">
+
+            <div class="faq-item open">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What do your plans cost?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a">
+                <p>Three plans. No setup fees. Catch-up work (if you're behind) is quoted separately after your free checkup call.</p>
+                <div class="faq-billing-wrap">
+                  <div class="billing-inner">
+                    <button class="bill-btn" id="faq-bill-mo" onclick="setFaqBilling('monthly')">Monthly</button>
+                    <button class="bill-btn active" id="faq-bill-yr" onclick="setFaqBilling('annual')">Annual &middot; save 15%</button>
+                  </div>
+                </div>
+                <div class="faq-plan-grid">
+                  <div class="plan-card">
+                    <div class="plan-top-std"></div>
+                    <div class="plan-wrap">
+                      <div class="plan-name">First Responder</div>
+                      <div class="plan-who">Owner-operators who need clean books and no surprises.</div>
+                      <div class="plan-price-row"><span class="plan-amt" data-monthly="349" data-annual="297">$297</span><span class="plan-per">/mo</span></div>
+                      <div class="plan-bill faq-plan-bill">billed annually</div>
+                      <button class="btn btn-ink btn-md plan-cta-btn" onclick="openModal()">Get Started</button>
+                      <hr class="plan-div" />
+                      <div class="plan-feats">
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Monthly reconciliation</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Up to 2 bank/credit accounts</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Quarterly P&amp;L + Balance Sheet</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Email support, 48h response</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="plan-card featured">
+                    <div class="plan-top-feat"></div>
+                    <div class="plan-wrap">
+                      <div class="plan-pop">Most Popular</div>
+                      <div class="plan-name">Engine Company</div>
+                      <div class="plan-who">Growing crews that need numbers to run on.</div>
+                      <div class="plan-price-row"><span class="plan-amt" data-monthly="649" data-annual="552">$552</span><span class="plan-per">/mo</span></div>
+                      <div class="plan-bill faq-plan-bill">billed annually</div>
+                      <button class="btn btn-red btn-md plan-cta-btn" onclick="openModal()">Get Started</button>
+                      <hr class="plan-div" />
+                      <div class="plan-feats">
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Everything in First Responder</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Up to 6 accounts + payroll for 10</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Books closed by the 10th</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Job costing &amp; profit by project</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>90-day cash flow projection</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Dedicated responder, 24h response</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="plan-card">
+                    <div class="plan-top-prem"></div>
+                    <div class="plan-wrap">
+                      <div class="plan-name">Battalion Chief</div>
+                      <div class="plan-who">Multi-crew shops that need full finance visibility.</div>
+                      <div class="plan-price-row"><span class="plan-amt" data-monthly="1149" data-annual="977">$977</span><span class="plan-per">/mo</span></div>
+                      <div class="plan-bill faq-plan-bill">billed annually</div>
+                      <button class="btn btn-ink btn-md plan-cta-btn" onclick="openModal()">Get Started</button>
+                      <hr class="plan-div" />
+                      <div class="plan-feats">
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Everything in Engine Company</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Unlimited accounts + full payroll</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Weekly cash-flow update</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Monthly CFO strategy call</span></div>
+                        <div class="plan-feat"><i data-lucide="check" class="feat-chk" style="width:15px;height:15px;stroke-width:3;"></i><span>Priority line, same-day response</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p style="margin-top:16px;">Annual plans are billed as a lump sum. Monthly plans are billed on the first of each month. We require a 3-month initial commitment on all plans so we have time to actually fix things, not just start.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Is there a setup fee?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>No setup fee. Your first invoice is just the monthly rate. If you're behind on your books, catch-up work is quoted separately based on how far behind you are and how complex the cleanup is. We give you that number upfront, before you commit to anything.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Why the 3-month minimum?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>Because bookkeeping takes time to set up right. The first month we're building your chart of accounts, connecting your bank feeds, and understanding your business. The second month we're refining. By month three you have clean books, a working system, and numbers you can use. A one-month engagement doesn't do that for anyone.</p><p>After three months, you can cancel with 30 days notice. No long-term lock-in.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What's included in catch-up work and how is it priced?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>Catch-up work means getting your books current if you're behind. We assess how far back you are and what's involved in the cleanup on your free checkup call. The quote is a flat fee for the project, not an hourly rate. You know the full number before we start anything.</p><p>Most catch-ups take two to five weeks depending on how far behind you are and how organized your records are. We've done 14-month cleanups. We've seen worse.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Do you charge extra for Xero?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>Xero has its own subscription cost, which you pay directly to Xero. It runs about $30-$85/month depending on the plan you need. We do not mark up Xero or take a cut of your subscription. We can help you pick the right Xero plan for your business size and needs.</p></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="faq-group" id="services">
+          <div class="faq-group-head">
+            <div class="faq-group-ic"><i data-lucide="briefcase" style="width:20px;height:20px;stroke-width:2.25;"></i></div>
+            <div class="faq-group-title">Services</div>
+          </div>
+          <div class="faq-items">
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What exactly do you do each month?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a">
+                <p>Every month, we:</p>
+                <ul>
+                  <li>Reconcile all your bank and credit card accounts in Xero</li>
+                  <li>Categorize every transaction correctly (we ask you when something is unclear)</li>
+                  <li>Close your books by the 10th of the following month</li>
+                  <li>Send you a plain-English summary with your P&L, balance sheet, and anything notable</li>
+                </ul>
+                <p>Depending on your plan, we also handle payroll entry, job costing by project type, 90-day cash flow projection, and quarterly estimated tax calculation.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Do you do payroll?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>We handle payroll entry and reconciliation in Xero for Engine Company and Battalion Chief clients. We don't run a separate payroll service but we work alongside whichever payroll provider you use (Gusto, ADP, QuickBooks Payroll, etc.) and make sure the entries land in your books correctly.</p><p>If you're looking for payroll management recommendations, we'll tell you what makes sense for your crew size and state.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Do you do taxes?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>We don't file business tax returns. We are bookkeepers, not CPAs. What we do is keep your books clean and current all year so that when your CPA asks for records in January, you have everything they need and tax season is a non-event.</p><p>We also calculate and remind you about quarterly estimated tax payments based on your actual income. Most of our clients stop getting surprised by tax bills after their first year with us.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What is job costing and do I need it?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>Job costing means tracking revenue and expenses at the job level, not just the business level. Instead of knowing "we made $40K last month," you know "service calls made 38% margin, installs made 24% margin, and that big commercial job we thought was great actually lost $3,200."</p><p>If you're running more than one job type or have more than two trucks, you need job costing. It changes how you bid, what work you take, and how you grow. It's included in Engine Company and Battalion Chief plans.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What does the monthly summary look like?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>It's not a spreadsheet dump. It's a short written summary that covers: revenue vs. last month, biggest expense changes, anything that looked unusual, and a plain-English read on your cash position. Attached to that is your standard Xero P&L and balance sheet if you want the detail.</p><p>The goal is that you read it in 5 minutes and actually understand it. If you have questions, you reply to the email and get a person.</p></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- GETTING STARTED -->
+        <div class="faq-group" id="getting-started">
+          <div class="faq-group-head">
+            <div class="faq-group-ic"><i data-lucide="play-circle" style="width:20px;height:20px;stroke-width:2.25;"></i></div>
+            <div class="faq-group-title">Getting Started</div>
+          </div>
+          <div class="faq-items">
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What happens on the free checkup call?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>It's a 30-minute call where we figure out where your books are and what you actually need. We'll ask about: how far behind you are, what software you're using, how many accounts and employees you have, and what's been breaking down. By the end, we give you an honest assessment of what it will take to fix things and what it will cost. No commitment required to have the call.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">I'm months behind. Is it too late?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>It's not too late. We've cleaned up books that were two years behind. The important thing is that you start. Every month you wait adds another month of work and another month of making decisions on bad information.</p><p>We'll quote the catch-up work as a flat fee upfront so you know exactly what you're getting into before you agree to anything.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">My books are a complete mess. Will you judge me?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>No. We have seen things. Shoe boxes of receipts. Bank accounts never reconciled. Years of transactions categorized as "Uncategorized Expense." Business and personal accounts completely mixed. We don't judge because we've seen worse, and because every client who called us was in a harder place when they called than they are now.</p><p>The call is not an audit. It's a conversation.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">How long does it take to get started?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>After your checkup call, if you decide to move forward, we typically start within one week. The onboarding process takes about three to five business days: we get you set up in Xero, connect your bank feeds, build out your chart of accounts, and get your field software integration working if applicable. You don't have to do most of this yourself.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Do I need to be in Louisiana or Wisconsin?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>No. We're remote-first and have been since we started. Most of our client interaction is email and phone. If you're in Louisiana or Wisconsin, we have deep local knowledge of the seasonal patterns and state tax calendars, but you don't need to be local to work with us. If you're outside those two states, we'll let you know on the checkup call if anything about your state changes how we'd structure things.</p></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SOFTWARE / XERO -->
+        <div class="faq-group" id="software">
+          <div class="faq-group-head">
+            <div class="faq-group-ic"><i data-lucide="monitor" style="width:20px;height:20px;stroke-width:2.25;"></i></div>
+            <div class="faq-group-title">Xero and Software</div>
+          </div>
+          <div class="faq-items">
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Why Xero and not QuickBooks?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>We use Xero because it's better for job costing, cash flow forecasting, and the kind of reporting that contractors actually need. The job tracking and project accounting features in Xero are more purpose-built for field businesses than what you get from QuickBooks at the same price point.</p><p>It's also where we've built our expertise and our workflow. We know how to make Xero work for a trades business specifically. If you're currently on QuickBooks, we handle the migration as part of your onboarding.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Do you work with ServiceTitan or Jobber?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>Yes. We build the integration between your field software and Xero so that job revenue, costs, and tech data flow into your books correctly. ServiceTitan and Jobber are the two we work with most. If you use a different platform, ask us on the checkup call and we'll tell you what the integration looks like.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What access do you need to my accounts?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>We need read-only access to your bank accounts (usually through Xero's bank feed connection, which doesn't give us transaction ability), full access to your Xero account, and read access to your field software if applicable. We do not need login credentials to your bank. We cannot move money or make payments. Xero's bank feed is a one-way data pull.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">I don't have Xero yet. Do I need to set it up first?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>No. We set up Xero for you as part of onboarding. You'll need a Xero account (we'll walk you through creating one if you don't have it) and we handle everything else: chart of accounts, bank connections, opening balances, field software integration. You don't need to know anything about Xero to start.</p></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CATCH-UP WORK -->
+        <div class="faq-group" id="catchup">
+          <div class="faq-group-head">
+            <div class="faq-group-ic"><i data-lucide="clock" style="width:20px;height:20px;stroke-width:2.25;"></i></div>
+            <div class="faq-group-title">Catch-Up Work</div>
+          </div>
+          <div class="faq-items">
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">How do you price catch-up work?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>Flat fee, quoted after your free checkup call. The factors that affect the price are: how many months behind you are, how many accounts you have, how organized your records are, and whether we need to reconstruct anything. You get the number upfront. We don't bill hourly so you don't get an invoice you didn't expect.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">What do I need to provide for a catch-up?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a">
+                <p>The more you have, the faster and cheaper the catch-up. Here's what's helpful:</p>
+                <ul>
+                  <li>Bank statements for all business accounts for the period we're catching up</li>
+                  <li>Credit card statements for any business cards</li>
+                  <li>Receipts or expense records (even partial is fine)</li>
+                  <li>Prior year tax returns (helps us understand the structure)</li>
+                  <li>Any existing bookkeeping files, even if they're a mess</li>
+                </ul>
+                <p>If you don't have all of this, we work with what you've got. Bank statements can be requested from your bank going back several years if needed.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">How long does a typical catch-up take?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>Two to eight weeks depending on how far behind you are and how organized your records are. A three-month catch-up with decent records usually takes two weeks. A 14-month catch-up with receipts in a shoe box takes longer. We'll give you a realistic timeline on your checkup call so you know what to expect.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggle(this)">
+                <span class="faq-q-text">Do I pay the monthly fee while catch-up is happening?</span>
+                <span class="faq-toggle"><i data-lucide="plus" style="width:20px;height:20px;stroke-width:2.5;"></i></span>
+              </div>
+              <div class="faq-a"><p>Catch-up work and monthly bookkeeping are billed separately. You pay the flat catch-up fee for the cleanup project. Your monthly bookkeeping plan starts after we've completed the catch-up and your books are current. We don't charge you both at the same time for the same period.</p></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- end faq-content -->
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container-sm final-inner">
+    <h2 class="final-h2">Still have questions?<br>Call us.</h2>
+    <p class="final-sub">Thirty minutes on the phone is worth more than reading 20 FAQs. We're available Mon-Sat 1:00p-9:00p and we'll give you straight answers.</p>
+    <div class="final-actions">
+      <button class="btn btn-ink btn-xl" onclick="openModal()">
+        <i data-lucide="phone" style="width:19px;height:19px;"></i> Book a Free Checkup
+      </button>
+      <a href="tel:2252746576" class="btn btn-ghost-white btn-xl">(225) 274-6576</a>
+    </div>
+    <p class="final-disclaimer">No judgment &middot; No contracts &middot; No commitment &middot; Mon&ndash;Sat 1:00p&ndash;9:00p</p>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script>
+function toggle(el) {
+  var item = el.closest('.faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+  lucide.createIcons();
+}
+function jumpTo(id, btn) {
+  var el = document.getElementById(id);
+  if (el) { var y = el.getBoundingClientRect().top + window.pageYOffset - 100; window.scrollTo({ top: y, behavior: 'smooth' }); }
+  document.querySelectorAll('.faq-nav-link').forEach(function(l) { l.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+}
+function setFaqBilling(m) {
+  document.getElementById('faq-bill-mo').classList.toggle('active', m === 'monthly');
+  document.getElementById('faq-bill-yr').classList.toggle('active', m === 'annual');
+  document.querySelectorAll('.faq-plan-grid .plan-amt').forEach(function(el) {
+    el.textContent = '$' + (m === 'annual' ? Math.round(+el.dataset.monthly * 0.85) : +el.dataset.monthly).toLocaleString();
+  });
+  document.querySelectorAll('.faq-plan-bill').forEach(function(el) {
+    el.textContent = m === 'annual' ? 'billed annually' : 'billed monthly';
+  });
+}
+</script>
+<script src="site.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

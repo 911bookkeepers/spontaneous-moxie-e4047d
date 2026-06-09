@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q39996G5NK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q39996G5NK');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Free Tools — 911 Bookkeepers LLC</title>
+<meta name="description" content="Free calculators and guides for trades contractors. Job costing, overhead rate, seasonal cash flow, markup vs. margin, breakeven. No email required for most tools." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Saira+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Kaushan+Script&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="site.css" />
+<style>
+.tools-section { background: var(--white); padding: 100px 0; }
+.tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
+.tool-card { background: var(--white); border: 2px solid var(--ink); border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 180ms var(--ease-out), box-shadow 180ms; display: flex; flex-direction: column; }
+.tool-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.tool-stripe { height: 6px; }
+.tool-body { padding: 26px 24px; flex: 1; display: flex; flex-direction: column; }
+.tool-icon { width: 48px; height: 48px; border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; border: 2px solid var(--ink); }
+.tool-type { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.10em; font-size: 10px; color: var(--steel-500); margin-bottom: 8px; }
+.tool-title { font-family: var(--font-head); font-weight: 800; text-transform: uppercase; font-size: 19px; color: var(--ink); margin-bottom: 10px; line-height: 1.1; }
+.tool-desc { font-size: 14.5px; color: var(--steel-600); line-height: 1.6; margin-bottom: 20px; flex: 1; }
+.tool-what { background: var(--steel-50); border-radius: var(--r-md); padding: 12px 14px; margin-bottom: 20px; }
+.tool-what-head { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 0.08em; color: var(--steel-500); margin-bottom: 8px; }
+.tool-answer { font-family: var(--font-mono); font-size: 13px; color: var(--steel-700); line-height: 1.5; }
+.tool-footer { margin-top: auto; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.tool-tag { font-family: var(--font-mono); font-size: 11px; color: var(--steel-500); background: var(--steel-100); padding: 3px 8px; border-radius: var(--r-sm); }
+
+/* Inline calculators */
+.calc-section { background: var(--steel-50); padding: 100px 0; border-top: 2px solid var(--steel-200); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 52px; }
+.calc-card { background: var(--white); border: 2px solid var(--ink); border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-md); }
+.calc-head { background: var(--grad-dispatch); color: var(--white); padding: 18px 24px; display: flex; align-items: center; gap: 12px; }
+.calc-title { font-family: var(--font-head); font-weight: 800; text-transform: uppercase; font-size: 18px; }
+.calc-body { padding: 24px; }
+.calc-field { margin-bottom: 16px; }
+.calc-field label { display: block; font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 0.08em; color: var(--steel-600); margin-bottom: 6px; }
+.calc-field input { width: 100%; box-sizing: border-box; border: 2px solid var(--steel-300); border-radius: var(--r-md); padding: 10px 14px; font-family: var(--font-mono); font-size: 15px; color: var(--ink); background: var(--white); transition: border-color 120ms; }
+.calc-field input:focus { outline: none; border-color: var(--red); }
+.calc-result { background: var(--steel-50); border: 2px solid var(--ink); border-radius: var(--r-md); padding: 16px; text-align: center; margin-top: 4px; }
+.calc-result-label { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 11px; color: var(--steel-500); margin-bottom: 4px; }
+.calc-result-value { font-family: var(--font-mono); font-weight: 700; font-size: 32px; color: var(--red); }
+
+/* Email capture */
+.guide-section { background: var(--grad-dark); color: var(--white); padding: 100px 0; border-top: 3px solid var(--ink); }
+.guide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.guide-list { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+.guide-item { display: flex; gap: 14px; padding: 16px 18px; background: rgba(255,255,255,.04); border: 1.5px solid rgba(255,255,255,.10); border-radius: var(--r-md); align-items: flex-start; }
+.guide-ic { color: var(--gold); flex: none; margin-top: 2px; }
+.guide-name { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 14px; color: var(--white); margin-bottom: 3px; }
+.guide-sub { font-size: 13px; color: var(--steel-400); line-height: 1.4; }
+.capture-card { background: rgba(255,255,255,.05); border: 2px solid rgba(255,255,255,.12); border-radius: var(--r-xl); padding: 36px 32px; }
+.capture-head { font-family: var(--font-head); font-weight: 800; text-transform: uppercase; font-size: 26px; color: var(--white); margin-bottom: 10px; line-height: 1.1; }
+.capture-sub { font-size: 15px; color: var(--steel-400); margin-bottom: 28px; line-height: 1.5; }
+.capture-field { margin-bottom: 14px; }
+.capture-field label { display: block; font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 0.08em; color: var(--steel-500); margin-bottom: 6px; }
+.capture-field input { width: 100%; box-sizing: border-box; border: 2px solid rgba(255,255,255,.2); border-radius: var(--r-md); padding: 11px 14px; font-size: 15px; color: var(--white); background: rgba(255,255,255,.06); transition: border-color 120ms; }
+.capture-field input:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,.1); }
+.capture-field input::placeholder { color: var(--steel-600); }
+.capture-disclaimer { font-size: 12px; color: var(--steel-600); margin-top: 12px; text-align: center; }
+
+@media (max-width: 900px) {
+  .tools-grid { grid-template-columns: 1fr; }
+  .calc-grid   { grid-template-columns: 1fr; }
+  .guide-grid  { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div id="topbar"></div>
+<header class="site-header" id="site-header"></header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-eyebrow">Free Tools</div>
+    <h1 class="page-hero-h1">Numbers you can use<br><span class="gold">right now. No catch.</span></h1>
+    <p class="page-hero-intro">Calculators and guides built for trades contractors. Use them to figure out your real overhead rate, whether you're actually marking up jobs correctly, and when your slow season is going to hurt.</p>
+  </div>
+</section>
+
+<!-- TOOL CARDS -->
+<section class="tools-section">
+  <div class="container">
+    <div class="section-label">Free resources</div>
+    <h2 class="section-h2">Seven tools contractors actually use</h2>
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-stripe" style="background:var(--red);"></div>
+        <div class="tool-body">
+          <div class="tool-icon" style="background:rgba(204,18,0,.08);color:var(--red);"><i data-lucide="calculator" style="width:22px;height:22px;stroke-width:2.25;"></i></div>
+          <div class="tool-type">Calculator</div>
+          <div class="tool-title">Overhead Rate Calculator</div>
+          <div class="tool-desc">Your hourly rate should cover more than just labor. This calculator shows you what your real overhead rate is so you stop underpricing every job.</div>
+          <div class="tool-what">
+            <div class="tool-what-head">What it tells you</div>
+            <div class="tool-answer">Your minimum billable rate to cover all fixed costs before you make a dollar of profit.</div>
+          </div>
+          <div class="tool-footer">
+            <a href="#calc-overhead" class="btn btn-red btn-sm">Use it below</a>
+            <span class="tool-tag">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-stripe" style="background:var(--gold);"></div>
+        <div class="tool-body">
+          <div class="tool-icon" style="background:rgba(245,196,0,.10);color:#A07B00;"><i data-lucide="percent" style="width:22px;height:22px;stroke-width:2.25;"></i></div>
+          <div class="tool-type">Calculator</div>
+          <div class="tool-title">Markup vs. Margin</div>
+          <div class="tool-desc">Most contractors confuse markup and margin. A 25% markup is not a 25% margin. This calculator fixes that. Enter your cost and see what you actually need to charge to hit your target margin.</div>
+          <div class="tool-what">
+            <div class="tool-what-head">What it tells you</div>
+            <div class="tool-answer">The selling price that actually delivers the gross margin percentage you need.</div>
+          </div>
+          <div class="tool-footer">
+            <a href="#calc-markup" class="btn btn-ink btn-sm">Use it below</a>
+            <span class="tool-tag">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-stripe" style="background:var(--navy);"></div>
+        <div class="tool-body">
+          <div class="tool-icon" style="background:rgba(0,32,128,.08);color:var(--navy);"><i data-lucide="trending-up" style="width:22px;height:22px;stroke-width:2.25;"></i></div>
+          <div class="tool-type">Calculator</div>
+          <div class="tool-title">Breakeven Revenue Calculator</div>
+          <div class="tool-desc">What's the minimum revenue you need to cover every bill and break even? Every business owner should know this number. Most don't.</div>
+          <div class="tool-what">
+            <div class="tool-what-head">What it tells you</div>
+            <div class="tool-answer">Your monthly revenue floor. Below this number, you're losing money no matter what it feels like.</div>
+          </div>
+          <div class="tool-footer">
+            <a href="#calc-breakeven" class="btn btn-ink btn-sm">Use it below</a>
+            <span class="tool-tag">Free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-stripe" style="background:var(--steel-400);"></div>
+        <div class="tool-body">
+          <div class="tool-icon" style="background:var(--steel-50);color:var(--steel-600);"><i data-lucide="truck" style="width:22px;height:22px;stroke-width:2.25;"></i></div>
+          <div class="tool-type">Calculator</div>
+          <div class="tool-title">Cost Per Truck Calculator</div>
+          <div class="tool-desc">Before you add another truck, run the numbers. Insurance, fuel, maintenance, driver cost, dispatch overhead. This calculator gives you the fully-loaded cost of each truck on the road.</div>
+          <div class="tool-what">
+            <div class="tool-what-head">What it tells you</div>
+            <div class="tool-answer">Monthly fully-loaded cost per truck and the revenue required to make that truck profitable.</div>
+          </div>
+          <div class="tool-footer">
+            <span class="btn btn-ghost btn-sm" style="cursor:default;opacity:.6;">Download below</span>
+            <span class="tool-tag">Free &middot; Spreadsheet</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-stripe" style="background:var(--red);"></div>
+        <div class="tool-body">
+          <div class="tool-icon" style="background:rgba(204,18,0,.08);color:var(--red);"><i data-lucide="calendar" style="width:22px;height:22px;stroke-width:2.25;"></i></div>
+          <div class="tool-type">Spreadsheet</div>
+          <div class="tool-title">Seasonal Cash Flow Planner</div>
+          <div class="tool-desc">A 12-month cash flow model built for seasonal trades. Map your busy and slow months, set aside reserve targets, and see if you'll make payroll in February before it's February.</div>
+          <div class="tool-what">
+            <div class="tool-what-head">What it tells you</div>
+            <div class="tool-answer">Your cash position 90 days out. Where you're safe. Where you're not.</div>
+          </div>
+          <div class="tool-footer">
+            <button class="btn btn-red btn-sm" onclick="document.getElementById('guide-capture').scrollIntoView({behavior:'smooth'})">Get the spreadsheet</button>
+            <span class="tool-tag">Free &middot; Email required</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-stripe" style="background:var(--gold);"></div>
+        <div class="tool-body">
+          <div class="tool-icon" style="background:rgba(245,196,0,.10);color:#A07B00;"><i data-lucide="file-text" style="width:22px;height:22px;stroke-width:2.25;"></i></div>
+          <div class="tool-type">Guide</div>
+          <div class="tool-title">Job Costing 101 for Contractors</div>
+          <div class="tool-desc">A plain-English guide to setting up job costing in Xero for trades businesses. No accounting degree required. Covers job types, cost categories, and how to read a job-level P&amp;L.</div>
+          <div class="tool-what">
+            <div class="tool-what-head">What you get</div>
+            <div class="tool-answer">12-page PDF. Chart of accounts template. Job cost report template.</div>
+          </div>
+          <div class="tool-footer">
+            <button class="btn btn-ink btn-sm" onclick="document.getElementById('guide-capture').scrollIntoView({behavior:'smooth'})">Get the guide</button>
+            <span class="tool-tag">Free &middot; Email required</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card" style="grid-column: span 3;">
+        <div class="tool-stripe" style="background:var(--navy);"></div>
+        <div class="tool-body" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+          <div>
+            <div class="tool-icon" style="background:rgba(0,32,128,.08);color:var(--navy);"><i data-lucide="shield-check" style="width:22px;height:22px;stroke-width:2.25;"></i></div>
+            <div class="tool-type">Checklist</div>
+            <div class="tool-title">Year-End Tax Prep Checklist for Contractors</div>
+            <div class="tool-desc">The 14 things your CPA needs from you every January. Most contractors are missing at least 6 of them. Stop the scramble.</div>
+            <div class="tool-footer">
+              <button class="btn btn-red btn-sm" onclick="document.getElementById('guide-capture').scrollIntoView({behavior:'smooth'})">Get the checklist</button>
+              <span class="tool-tag">Free &middot; PDF</span>
+            </div>
+          </div>
+          <div class="tool-what" style="margin-bottom:0;">
+            <div class="tool-what-head">What's on it</div>
+            <div class="tool-answer" style="display:flex;flex-direction:column;gap:6px;">
+              <span>&#10003; Equipment purchase records and depreciation schedules</span>
+              <span>&#10003; Mileage logs (and how to reconstruct them)</span>
+              <span>&#10003; All 1099-NEC contractor payments over $600</span>
+              <span>&#10003; Home office deduction documentation</span>
+              <span>&#10003; Estimated tax payment records</span>
+              <span>&#10003; ...and 9 more most contractors miss</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INLINE CALCULATORS -->
+<section class="calc-section" id="calculators">
+  <div class="container">
+    <div class="section-label">Use right now</div>
+    <h2 class="section-h2">Three calculators. No signup.</h2>
+    <div class="calc-grid">
+
+      <!-- Overhead Rate -->
+      <div class="calc-card" id="calc-overhead">
+        <div class="calc-head">
+          <i data-lucide="calculator" style="width:22px;height:22px;stroke-width:2;"></i>
+          <div class="calc-title">Overhead Rate Calculator</div>
+        </div>
+        <div class="calc-body">
+          <div class="calc-field"><label>Monthly rent / office cost ($)</label><input type="number" id="oh-rent" placeholder="800" oninput="calcOverhead()" /></div>
+          <div class="calc-field"><label>Monthly insurance ($)</label><input type="number" id="oh-ins" placeholder="600" oninput="calcOverhead()" /></div>
+          <div class="calc-field"><label>Monthly vehicle costs ($)</label><input type="number" id="oh-veh" placeholder="1200" oninput="calcOverhead()" /></div>
+          <div class="calc-field"><label>Monthly utilities + phone + software ($)</label><input type="number" id="oh-util" placeholder="400" oninput="calcOverhead()" /></div>
+          <div class="calc-field"><label>Monthly owner salary you need ($)</label><input type="number" id="oh-sal" placeholder="5000" oninput="calcOverhead()" /></div>
+          <div class="calc-field"><label>Billable hours per month (your whole crew)</label><input type="number" id="oh-hrs" placeholder="160" oninput="calcOverhead()" /></div>
+          <div class="calc-result">
+            <div class="calc-result-label">Overhead cost per billable hour</div>
+            <div class="calc-result-value" id="oh-result">$0.00</div>
+          </div>
+          <p style="font-size:12.5px;color:var(--steel-500);margin-top:10px;line-height:1.5;">This is the minimum you must charge per hour before profit. Your actual rate should be this plus your labor cost plus your target margin.</p>
+        </div>
+      </div>
+
+      <!-- Markup vs Margin -->
+      <div class="calc-card" id="calc-markup">
+        <div class="calc-head">
+          <i data-lucide="percent" style="width:22px;height:22px;stroke-width:2;"></i>
+          <div class="calc-title">Markup vs. Margin</div>
+        </div>
+        <div class="calc-body">
+          <div class="calc-field"><label>Your job cost ($)</label><input type="number" id="mm-cost" placeholder="1000" oninput="calcMarkup()" /></div>
+          <div class="calc-field"><label>Target gross margin (%)</label><input type="number" id="mm-margin" placeholder="35" oninput="calcMarkup()" /></div>
+          <div class="calc-result">
+            <div class="calc-result-label">Price to charge your customer</div>
+            <div class="calc-result-value" id="mm-price">$0.00</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div class="calc-result" style="padding:12px;">
+              <div class="calc-result-label">Required markup</div>
+              <div class="calc-result-value" style="font-size:22px;" id="mm-markup">0%</div>
+            </div>
+            <div class="calc-result" style="padding:12px;">
+              <div class="calc-result-label">Gross profit $</div>
+              <div class="calc-result-value" style="font-size:22px;" id="mm-profit">$0</div>
+            </div>
+          </div>
+          <p style="font-size:12.5px;color:var(--steel-500);margin-top:12px;line-height:1.5;">A 35% gross margin requires a 53.8% markup on cost. Most contractors underprice because they use markup when they should use margin.</p>
+        </div>
+      </div>
+
+      <!-- Breakeven -->
+      <div class="calc-card" id="calc-breakeven">
+        <div class="calc-head">
+          <i data-lucide="trending-up" style="width:22px;height:22px;stroke-width:2;"></i>
+          <div class="calc-title">Breakeven Revenue</div>
+        </div>
+        <div class="calc-body">
+          <div class="calc-field"><label>Total monthly fixed costs ($)</label><input type="number" id="be-fixed" placeholder="8000" oninput="calcBreakeven()" /></div>
+          <div class="calc-field"><label>Your gross margin (%)</label><input type="number" id="be-margin" placeholder="35" oninput="calcBreakeven()" /></div>
+          <div class="calc-result">
+            <div class="calc-result-label">Monthly revenue to break even</div>
+            <div class="calc-result-value" id="be-result">$0</div>
+          </div>
+          <p style="font-size:12.5px;color:var(--steel-500);margin-top:10px;line-height:1.5;">Below this revenue number you're losing money regardless of how busy you feel. Above it, every dollar of revenue contributes to profit at your margin rate.</p>
+        </div>
+      </div>
+
+      <!-- Placeholder for spacing -->
+      <div style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.03);border:2px dashed var(--steel-300);border-radius:var(--r-xl);padding:32px;text-align:center;">
+        <div>
+          <div style="font-family:var(--font-head);font-weight:700;text-transform:uppercase;font-size:14px;color:var(--steel-400);margin-bottom:8px;">Cost Per Truck Calculator</div>
+          <p style="font-size:14px;color:var(--steel-500);margin-bottom:16px;">This one's a full spreadsheet. Enter your email below and we'll send it to you.</p>
+          <button class="btn btn-ink btn-sm" onclick="document.getElementById('guide-capture').scrollIntoView({behavior:'smooth'})">Get the spreadsheet</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE FOR GUIDES -->
+<section class="guide-section" id="guide-capture">
+  <div class="container">
+    <div class="guide-grid">
+      <div>
+        <div class="section-label" style="color:var(--gold);">Get the full toolkit</div>
+        <h2 class="section-h2 light">Four resources.<br>One email.</h2>
+        <p style="color:var(--steel-400);font-size:16px;line-height:1.6;margin-bottom:24px;">Enter your info and we'll send all four directly to you. No drip campaign. No weekly newsletter unless you ask for one. Just the tools.</p>
+        <div class="guide-list">
+          <div class="guide-item"><span class="guide-ic"><i data-lucide="file-spreadsheet" style="width:20px;height:20px;stroke-width:2.25;"></i></span><div><div class="guide-name">Seasonal Cash Flow Planner</div><div class="guide-sub">12-month model. Works for any trades business in any market.</div></div></div>
+          <div class="guide-item"><span class="guide-ic"><i data-lucide="book-open" style="width:20px;height:20px;stroke-width:2.25;"></i></span><div><div class="guide-name">Job Costing 101 Guide</div><div class="guide-sub">12 pages. Chart of accounts template included.</div></div></div>
+          <div class="guide-item"><span class="guide-ic"><i data-lucide="check-square" style="width:20px;height:20px;stroke-width:2.25;"></i></span><div><div class="guide-name">Year-End Tax Prep Checklist</div><div class="guide-sub">The 14 things your CPA needs from you in January.</div></div></div>
+          <div class="guide-item"><span class="guide-ic"><i data-lucide="truck" style="width:20px;height:20px;stroke-width:2.25;"></i></span><div><div class="guide-name">Cost Per Truck Calculator</div><div class="guide-sub">Fully-loaded cost model. Know if a new truck makes sense before you sign.</div></div></div>
+        </div>
+      </div>
+      <div class="capture-card" id="captureCard">
+        <div class="capture-head">Send me the toolkit</div>
+        <div class="capture-sub">Four tools. No drip sequence. No pitch unless you want one.</div>
+        <form onsubmit="submitCapture(event)">
+          <div class="capture-field"><label>Your Name</label><input type="text" placeholder="Mike Fontenot" required /></div>
+          <div class="capture-field"><label>Business Name</label><input type="text" placeholder="Fontenot HVAC LLC" required /></div>
+          <div class="capture-field"><label>Email Address</label><input type="email" placeholder="mike@fontenotvac.com" required /></div>
+          <div class="capture-field"><label>Trade</label><input type="text" placeholder="HVAC, Plumbing, Electrical..." required /></div>
+          <button type="submit" class="btn btn-red btn-lg" style="width:100%;margin-top:4px;">
+            <i data-lucide="send" style="width:17px;height:17px;"></i> Send Me the Tools
+          </button>
+          <div class="capture-disclaimer">No spam. Unsubscribe any time. We hate drip campaigns too.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container-sm final-inner">
+    <h2 class="final-h2">Tools are a start.<br>Clean books are the answer.</h2>
+    <p class="final-sub">Free 30-minute checkup. We'll tell you exactly what your books need and what it'll cost to fix them.</p>
+    <div class="final-actions">
+      <button class="btn btn-ink btn-xl" onclick="openModal()">
+        <i data-lucide="phone" style="width:19px;height:19px;"></i> Book a Free Checkup
+      </button>
+      <a href="tel:2252746576" class="btn btn-ghost-white btn-xl">(225) 274-6576</a>
+    </div>
+    <p class="final-disclaimer">No judgment &middot; No contracts &middot; No commitment &middot; Mon&ndash;Sat 1:00p&ndash;9:00p</p>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script>
+function calcOverhead() {
+  var rent  = parseFloat(document.getElementById('oh-rent').value) || 0;
+  var ins   = parseFloat(document.getElementById('oh-ins').value) || 0;
+  var veh   = parseFloat(document.getElementById('oh-veh').value) || 0;
+  var util  = parseFloat(document.getElementById('oh-util').value) || 0;
+  var sal   = parseFloat(document.getElementById('oh-sal').value) || 0;
+  var hrs   = parseFloat(document.getElementById('oh-hrs').value) || 1;
+  var total = rent + ins + veh + util + sal;
+  var rate  = hrs > 0 ? total / hrs : 0;
+  document.getElementById('oh-result').textContent = '$' + rate.toFixed(2);
+}
+function calcMarkup() {
+  var cost   = parseFloat(document.getElementById('mm-cost').value) || 0;
+  var margin = parseFloat(document.getElementById('mm-margin').value) || 0;
+  if (margin >= 100) { margin = 99; }
+  var price  = margin > 0 ? cost / (1 - margin / 100) : cost;
+  var profit = price - cost;
+  var markup = cost > 0 ? (profit / cost * 100) : 0;
+  document.getElementById('mm-price').textContent  = '$' + price.toFixed(2);
+  document.getElementById('mm-markup').textContent = markup.toFixed(1) + '%';
+  document.getElementById('mm-profit').textContent = '$' + profit.toFixed(2);
+}
+function calcBreakeven() {
+  var fixed  = parseFloat(document.getElementById('be-fixed').value) || 0;
+  var margin = parseFloat(document.getElementById('be-margin').value) || 0;
+  var result = margin > 0 ? fixed / (margin / 100) : 0;
+  document.getElementById('be-result').textContent = '$' + Math.round(result).toLocaleString();
+}
+function submitCapture(e) {
+  e.preventDefault();
+  document.getElementById('captureCard').innerHTML = '<div style="text-align:center;padding:40px 0;"><div style="font-size:48px;margin-bottom:16px;">&#10003;</div><div style="font-family:var(--font-head);font-weight:800;text-transform:uppercase;font-size:24px;color:#fff;margin-bottom:10px;">On its way.</div><p style="color:var(--steel-400);font-size:15px;line-height:1.5;">Check your inbox. If it doesn\'t show up in 10 minutes, check spam and then call us at (225) 274-6576.</p></div>';
+}
+</script>
+<script src="site.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
